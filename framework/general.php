@@ -22,6 +22,7 @@ function prontomas_theme_support_settings() {
 	add_theme_support('customize-selective-refresh-widgets');
 	add_theme_support("title-tag");
 	add_theme_support("menus");
+    add_image_size( 'minlogo', '125', '77' ,  $crop = false );
 }
 
 

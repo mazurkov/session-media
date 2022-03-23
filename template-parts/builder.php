@@ -113,6 +113,10 @@
 					<?php get_template_part('template-parts/sections/section-case-study-content'); ?>
 				<?php } ?>
 
+                <?php if ($section == 'section-cases-pricing') { ?>
+                    <?php get_template_part('template-parts/sections/section-cases-pricing'); ?>
+                <?php } ?>
+
 			<?php endwhile;
 		endif; ?>
     </div>

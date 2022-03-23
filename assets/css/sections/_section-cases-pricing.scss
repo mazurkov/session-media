@@ -1,0 +1,175 @@
+.section-case-pricing .cases-grid {
+  .case-item {
+    &-pricing {
+      border-radius: 30px;
+      padding: 60px 40px 50px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: 1200px) {
+        padding: 50px 25px;
+      }
+      @media screen and (max-width: 660px) {
+        padding: 60px 30px;
+      }
+      @media screen and (max-width: 380px) {
+        padding: 50px 20px;
+      }
+
+      &:hover {
+        .case-item__minlogo {
+          img {
+            transition: all ease-in-out 300ms;
+            opacity: 100%;
+          }
+        }
+      }
+    }
+
+    &__title {
+      font-size: 28px;
+      text-transform: uppercase;
+      margin-bottom: 62px;
+      @media screen and (max-width: 380px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__minlogo {
+      position: absolute;
+      top: 32px;
+      right: 40px;
+      width: 125px;
+      @media screen and (max-width: 1200px) {
+        right: 25px;
+      }
+      @media screen and (max-width: 660px) {
+        right: 30px;
+      }
+      @media screen and (max-width: 380px) {
+        width: 100px;
+        right: 20px;
+      }
+
+      img {
+        transition: all ease-in-out 300ms;
+        max-width: 100%;
+        height: auto;
+        opacity: 30%;
+        @media screen and (max-width: 1200px) {
+          opacity: 100%;
+        }
+      }
+    }
+
+    &__price {
+      text-transform: uppercase;
+      border-top: 1px dashed $color-grey;
+      border-bottom: 1px dashed $color-grey;
+      font-size: 15px;
+      padding-top: 16px;
+      padding-bottom: 11px;
+      color: #adadad;
+      line-height: 1.2;
+      margin-bottom: 34px;
+      @media screen and (max-width: 1200px) {
+        padding-left: 0;
+        font-size: 14px;
+      }
+      @media screen and (max-width: 660px) {
+        padding-left: 11px;
+        font-size: 15px;
+      }
+
+      span {
+        font-size: 52px;
+        font-weight: 700;
+        color: $color-green;
+        position: relative;
+        @media screen and (max-width: 1200px) {
+          font-size: 46px;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 52px;
+        }
+
+        @media screen and (max-width: 682px) {
+          font-size: 46px;
+        }
+
+        @media screen and (max-width: 660px) {
+          font-size: 52px;
+        }
+        @media screen and (max-width: 380px) {
+          font-size: 40px;
+        }
+
+        &.btn-orange {
+          color: $color-orange;
+        }
+      }
+    }
+
+    &__currency {
+      position: absolute;
+      top: 4px;
+      left: -14px;
+      color: inherit;
+      font-size: 24px;
+      font-weight: 400;
+      @media screen and (max-width: 1200px) {
+        font-size: 20px;
+      }
+    }
+
+    &__description {
+      font-size: 16px;
+      color: #969494;
+      margin-bottom: 35px;
+    }
+
+    &__advantages {
+      margin-bottom: 45px;
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 20px;
+      }
+
+      li {
+        padding-left: 22px;
+        margin-bottom: 15px;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 15px;
+          height: 15px;
+          background-color: $color-green;
+          border-radius: 50%;
+          position: absolute;
+          top: 7px;
+          left: 1px;
+        }
+
+        &:after {
+          content: '';
+          width: 9px;
+          height: 5px;
+          border-bottom: 2px solid #fff;
+          border-left: 2px solid #fff;
+          position: absolute;
+          top: 11px;
+          left: 4px;
+          transform: rotateZ(-45deg);
+        }
+      }
+    }
+
+    .btn-wrap {
+      margin-top: auto;
+    }
+
+    .btn {
+      min-width: 216px;
+    }
+  }
+}
