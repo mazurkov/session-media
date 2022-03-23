@@ -88,21 +88,16 @@
         color: $color-green;
         position: relative;
         @media screen and (max-width: 1200px) {
-          font-size: 46px;
+          font-size: 44px;
         }
-        @media screen and (max-width: 992px) {
-          font-size: 52px;
-        }
-
         @media screen and (max-width: 682px) {
           font-size: 46px;
         }
-
         @media screen and (max-width: 660px) {
           font-size: 52px;
         }
         @media screen and (max-width: 380px) {
-          font-size: 40px;
+          font-size: 36px;
         }
 
         &.btn-orange {
@@ -119,7 +114,7 @@
       font-size: 24px;
       font-weight: 400;
       @media screen and (max-width: 1200px) {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
 
