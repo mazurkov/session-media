@@ -1,0 +1,339 @@
+.section-testimonials {
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 115px;
+
+  .bg {
+    img {
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      object-position: right center;
+    }
+  }
+
+  .section-row {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+  }
+
+  .col-left {
+    width: calc(50% - 30px);
+    position: relative;
+
+    .testimonial {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+      background-color: $color-white;
+      padding-top: 44px;
+      padding-bottom: 42px;
+      padding-left: 25px;
+      padding-right: 50px;
+      position: relative;
+
+      &__quote {
+        height: 30px;
+        line-height: 112px;
+        color: #072a5f;
+        font-size: 130px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+      }
+
+      &__content {
+        padding-top: 30px;
+        color: $color-grey;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: 1.75;
+        text-align: left;
+      }
+
+      &__author {
+        margin-top: 10px;
+        font-weight: 500;
+      }
+
+      &__position {
+        margin-top: 8px;
+        color: $color-grey;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: normal;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      &__author-photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 160px;
+        height: 160px;
+        transform: translateY(-40%) translateX(40%);
+        border-radius: 100%;
+      }
+    }
+
+    .client-item {
+      position: relative;
+      width: 87px;
+      height: 87px;
+      border-radius: 100%;
+      box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.15);
+      border: 1px solid #ffffff;
+
+      &__wrap {
+        position: absolute;
+
+        &:nth-child(1) {
+          top: -19%;
+          left: -30%;
+        }
+
+        &:nth-child(2) {
+          top: 27%;
+          left: -43%;
+        }
+
+        &:nth-child(3) {
+          top: 68%;
+          left: -21%;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .col-right {
+    width: calc(50% - 70px);
+
+    .section-title {
+      &:after {
+        margin-top: 12px;
+        content: "";
+        display: block;
+        width: 185px;
+        height: 3px;
+        background-color: #6cad4e;
+      }
+    }
+
+    .section-description {
+      margin-top: 20px;
+      color: $color-grey;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+    }
+
+    .permalink {
+      margin-top: 20px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-orange;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: 0.6px;
+
+      .caption {
+        position: relative;
+        line-height: 1;
+
+        &:after {
+          display: block;
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $color-orange;
+          @include transition;
+        }
+      }
+
+      .icon {
+        margin-left: 6px;
+        @include transition;
+
+        svg {
+          transform: translateY(-2px);
+          height: 12px;
+          width: auto;
+          display: block;
+        }
+      }
+
+      &:hover {
+        color: $color-orange-light;
+
+        .caption {
+          &:after {
+            background-color: $color-orange-light;
+          }
+        }
+
+        .icon {
+          transform: translateX(4px);
+        }
+      }
+    }
+
+    .clients {
+      display: flex;
+      margin-top: 24px;
+
+      .become-client {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        border: 4px solid $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.15);
+        background-color: #6cad4e;
+        color: $color-white;
+        font-size: 40px;
+        transform: translateX(-50px);
+      }
+
+      .photo {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        border: 4px solid $color-white;
+        box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.15);
+
+        &:first-child {
+          transform: none;
+        }
+
+        &:nth-child(1) {
+          transform: translateX(-10px);
+        }
+
+        &:nth-child(2) {
+          transform: translateX(-20px);
+        }
+
+        &:nth-child(3) {
+          transform: translateX(-30px);
+        }
+
+        &:nth-child(4) {
+          transform: translateX(-40px);
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+  }
+
+
+  @media(max-width: 1199px) {
+    padding-top: 120px;
+    padding-bottom: 90px;
+
+    .col-left {
+      .client-item__wrap:nth-child(1) {
+        top: -17%;
+        left: -10%;
+      }
+
+      .client-item__wrap:nth-child(2) {
+        top: 29%;
+        left: -24%;
+      }
+
+      .client-item__wrap:nth-child(3) {
+        top: 75%;
+        left: -14%;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    padding: 80px 0;
+    .section-row{
+     flex-direction: column-reverse;
+    }
+
+    .col-left{
+      width: 100%;
+      .client-item__wrap{
+        display: none;
+      }
+      .testimonial{
+        max-width: 90%;
+      }
+    }
+
+    .col-right{
+      width: 100%;
+      margin-bottom: 45px;
+    }
+  }
+
+  @media (max-width: 565px) {
+    .col-left{
+      .testimonial{
+        max-width: 100%;
+        padding-top: 35px;
+        &__quote{
+          height: 15px;
+          line-height: 90px;
+          font-size: 100px;
+        }
+        &__content{
+          font-size: 15px;
+        }
+        &__author-photo{
+          width: 100px;
+          height: 100px;
+          transform: translateY(-20%) translateX(20%);
+        }
+        &__position{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+
+}

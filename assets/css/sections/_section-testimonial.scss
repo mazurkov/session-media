@@ -1,0 +1,113 @@
+.section-testimonial {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 100px;
+
+  .bg {
+    img {
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      object-position: right center;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+
+  .author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      width: 144px;
+      height: 144px;
+      border-radius: 100%;
+      display: block;
+      object-fit: contain;
+      border: 8px solid $color-green;
+    }
+  }
+
+  .feedback {
+    max-width: 1090px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    margin-top: 28px;
+    text-align: center;
+    color: rgba($color-black, .77);
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: normal;
+    line-height: 1.65;
+  }
+
+  .author__name {
+    color: #f57f20;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.44px;
+    line-height: normal;
+  }
+
+  .author__position {
+    margin-top: 6px;
+    color: $color-grey;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  &[data-scheme=white] {
+    .author {
+      img {
+        background-color: $color-white;
+        border-color: $color-white;
+      }
+    }
+    .feedback {
+      color: $color-white;
+    }
+    .author__name {
+      color: $color-white;
+    }
+    .author__position {
+      color: $color-white;
+    }
+  }
+
+
+  @media(max-width: 1199px) {
+    padding-top: 100px;
+    padding-bottom: 90px;
+  }
+  @media (max-width: 991px) {
+    padding: 80px 0;
+    .feedback {
+      font-size: 22px;
+    }
+  }
+  @media (max-width: 767px) {
+    .feedback {
+      font-size: 18px;
+    }
+  }
+}

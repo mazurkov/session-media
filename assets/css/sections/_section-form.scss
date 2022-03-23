@@ -1,0 +1,30 @@
+.form-section {
+  padding: 60px 0;
+
+  .form {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto
+
+
+
+  }
+
+  .form__group-row {
+    display: flex;
+    justify-content: space-between;
+
+    .form__group {
+      width: calc(50% - 10px);
+    }
+  }
+
+  @media (max-width: 660px) {
+    .form__group-row {
+      flex-wrap: wrap;
+      .form__group {
+        width: 100%;
+      }
+    }
+  }
+}

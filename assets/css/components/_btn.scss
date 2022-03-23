@@ -1,0 +1,238 @@
+.btn {
+  min-width: 235px;
+  height: 66px;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: $color-white;
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 2.16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include transition;
+  position: relative;
+  cursor: pointer;
+
+  &.btn-medium {
+    min-width: 335px;
+  }
+
+  &.btn-small {
+    min-width: 195px;
+  }
+
+  &.btn-size-medium {
+    font-size: 17px;
+    height: 62px;
+  }
+
+  &.btn-tiny {
+    font-size: 14px;
+    min-width: 160px;
+    height: 54px;
+    @media (max-width: 1199px) {
+      font-size: 12px;
+      min-width: 148px;
+      height: 48px;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 16px;
+    height: 58px;
+    min-width: 215px;
+  }
+  @media (max-width: 991px) {
+    font-size: 15px;
+    height: 54px;
+    min-width: 200px;
+  }
+  @media (max-width: 345px) {
+    font-size: 14px;
+    height: 48px;
+    min-width: 180px;
+  }
+
+  &.btn-green {
+    background-color: $color-green;
+
+    &:before {
+      display: block;
+      content: "";
+      width: 4px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($color-white, .4);
+      @include transition;
+    }
+
+    &:hover {
+      color: $color-white;
+      &:before {
+        width: 100%;
+        background-color: rgba($color-white, .25);
+      }
+    }
+
+    &:active {
+      color: $color-white;
+    }
+
+    &:focus {
+      color: $color-white;
+    }
+
+    &:visited {
+      color: $color-white;
+    }
+
+  }
+
+  &.btn-orange {
+    background-color: $color-orange;
+
+    &:before {
+      display: block;
+      content: "";
+      width: 4px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($color-white, .4);
+      @include transition;
+    }
+
+    &:hover {
+      color: $color-white;
+
+      &:before {
+        width: 100%;
+        background-color: rgba($color-white, .25);
+      }
+    }
+
+    &:active {
+      color: $color-white;
+    }
+
+    &:focus {
+      color: $color-white;
+    }
+
+    &:visited {
+      color: $color-white;
+    }
+  }
+
+  &.btn-orange-2 {
+    background-color: $color-orange-light;
+
+    &:before {
+      display: block;
+      content: "";
+      width: 4px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($color-white, .4);
+      @include transition;
+    }
+
+    &:hover {
+      color: $color-white;
+
+      &:before {
+        width: 100%;
+        background-color: rgba($color-white, .25);
+      }
+    }
+
+    &:active {
+      color: $color-white;
+    }
+
+    &:focus {
+      color: $color-white;
+    }
+
+    &:visited {
+      color: $color-white;
+    }
+
+  }
+}
+
+.swal2-styled.swal2-confirm {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: $color-white;
+  font-family: $font-primary;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 2.16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include transition;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 160px;
+  height: 54px;
+  @media (max-width: 1199px) {
+    font-size: 12px;
+    min-width: 148px;
+    height: 48px;
+  }
+  background-color: $color-orange;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($color-white, .4);
+    @include transition;
+  }
+
+  &:hover {
+    color: $color-white;
+
+    &:before {
+      width: 100%;
+      background-color: rgba($color-white, .25);
+    }
+  }
+
+  &:active {
+    color: $color-white;
+  }
+
+  &:focus {
+    color: $color-white;
+  }
+
+  &:visited {
+    color: $color-white;
+  }
+}

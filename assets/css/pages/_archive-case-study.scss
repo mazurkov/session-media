@@ -1,0 +1,16 @@
+.post-type-archive-case-studies {
+  @media (max-width: 991px) {
+    .page-header {
+      padding-top: 165px;
+      padding-bottom: 165px;
+    }
+  }
+  @media (max-width: 660px) {
+    .page-header {
+      padding-bottom: 120px;
+      padding-top: 120px;
+    }
+  }
+}
+
+

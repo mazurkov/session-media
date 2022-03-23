@@ -1,0 +1,237 @@
+.page-template-post-single {
+
+  // Header
+  .page-header {
+    &__caption {
+      text-align: center;
+
+      .divider {
+        margin: 0 10px;
+      }
+
+      a {
+        position: relative;
+        @include transition;
+
+        &:before {
+          position: absolute;
+          display: block;
+          content: "";
+          bottom: -2px;
+          width: 0;
+          height: 1px;
+          transition: width .55s cubic-bezier(.25, .8, .25, 1) 0s;
+          right: 0;
+          background-color: $color-orange;
+        }
+
+        &:hover {
+          color: $color-orange;
+
+          &:before {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      &__bg img {
+        object-position: center;
+      }
+    }
+  }
+
+  // Content
+  .post-content-section {
+    padding: 100px 0;
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .content {
+      width: calc(100% - 255px - 45px);
+    }
+
+    .sidebar {
+      width: 255px;
+
+      .author-widget {
+        width: 100%;
+        border: 1px solid #F2F2F2;
+        padding-top: 35px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-bottom: 30px;
+
+        .author-photo {
+          position: relative;
+          width: 100px;
+          height: 100px;
+          border-radius: 100%;
+          margin-bottom: 16px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 100%;
+          }
+
+          .twitter-link {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #ffffff;
+            border-radius: 100%;
+            background-color: #1ba6ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+              width: 55%;
+              height: auto;
+              display: block;
+              object-fit: contain;
+
+              path {
+                fill: $color-white;
+              }
+            }
+          }
+
+        }
+        .author-name {
+          text-align: center;
+          margin-bottom: 12px;
+          line-height: 1;
+          font-weight: 500;
+        }
+
+        .author-bio {
+          color: $color-grey;
+          font-size: 16px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: 1.625;
+          text-align: center;
+
+        }
+
+      }
+
+      .share-widget {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-bottom: 55px;
+
+        .widget-title {
+          font-weight: 500;
+          margin-bottom: 14px;
+        }
+
+        .a2a_kit {
+          display: flex;
+        }
+      }
+
+      .newsletter-widget {
+        .widget-title {
+          padding-left: 25px;
+          padding-right: 25px;
+          margin-bottom: 20px;
+          display: block;
+          font-weight: 500;
+        }
+
+        .form__field {
+          display: block;
+          margin-bottom: 15px;
+        }
+
+        .input {
+          &::placeholder {
+            font-style: italic;
+          }
+        }
+
+        .btn {
+          height: 52px;
+          font-size: 17px;
+        }
+      }
+
+    }
+
+    @media (max-width: 1199px) {
+      padding: 85px 0;
+    }
+    @media (max-width: 991px) {
+      padding: 60px 0;
+      &__row {
+        flex-direction: column;
+      }
+      .content {
+        width: 100%;
+      }
+      .sidebar {
+        margin-top: 45px;
+        width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  // CTA Section
+  .cta-section {
+    .section-title {
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .insight-form-wrap {
+      margin-top: 50px;
+    }
+  }
+
+  // Related Posts
+  .related-posts {
+    padding: 100px 0;
+
+    .posts-grid {
+      margin-top: 85px;
+      margin-left: -15px;
+      margin-right: -15px;
+      display: flex;
+      flex-wrap: wrap;
+      @media (max-width: 767px) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      padding: 80px 0;
+    }
+    @media (max-width: 991px) {
+      padding: 60px 0;
+    }
+  }
+}

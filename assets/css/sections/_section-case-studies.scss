@@ -1,0 +1,528 @@
+.case-studies-section {
+  padding-bottom: 100px;
+  
+  .cases-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 110px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  .pagination-wrap {
+    .pagination {
+      margin-top: 35px;
+    }
+    
+    .cs-lazy-load {
+      margin-top: 35px;
+    }
+  }
+  
+  .service-filter {
+    position: relative;
+    z-index: 35;
+    margin-left: auto;
+    margin-right: auto;
+    width: 720px;
+    max-width: 100%;
+    height: 150px;
+    margin-top: -75px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.13);
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    label {
+      padding: 0 32px;
+      width: 100%;
+    }
+    
+    .choices {
+      width: 100%;
+      
+      height: 66px;
+      background-color: $color-white;
+      position: relative;
+      z-index: 15;
+      
+      &[data-type*=select-one]:after {
+        background-image: url(../img/down.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 14px;
+        height: 12px;
+        border: none;
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 25px;
+        position: absolute;
+      }
+      
+      &.is-open {
+        &:after {
+          transform: rotate(180deg) translateY(50%);
+        }
+      }
+      
+      &__inner {
+        padding: 0;
+        height: 100%;
+        display: flex;
+        background-color: $color-white;
+        align-items: center;
+        border: 1px solid #d8d8d8;
+        border-radius: 0;
+      }
+      
+      &__list {
+        &--single {
+          padding: 0;
+        }
+      }
+      
+      &__list {
+        &--dropdown {
+          border-radius: 0;
+          border: 1px solid #d8d8d8;
+          
+          .choices__item--selectable {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-bottom: 1px solid #d8d8d8;
+            color: rgba($color-black, .65);
+            border-radius: 0;
+            
+            &:hover {
+              color: $color-black;
+            }
+            
+            &:after {
+              display: none !important;
+            }
+          }
+        }
+      }
+      
+      &__item {
+        padding-left: 25px;
+        
+        &--selectable {
+          border-radius: 0;
+          color: $color-black;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: normal;
+          text-align: left;
+          text-transform: uppercase;
+          font-style: normal;
+          letter-spacing: 0.72px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .cases-grid {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 85px;
+    }
+    
+    .pagination-wrap {
+      .pagination {
+        margin-top: 15px;
+      }
+    }
+  }
+  @media (max-width: 660px) {
+    .cases-grid {
+      margin-top: 60px;
+    }
+    .service-filter {
+      height: 100px;
+      
+      label {
+        padding: 0 15px;
+      }
+      
+      .choices {
+        &[data-type*=select-one] {
+          &:after {
+            right: 15px;
+          }
+        }
+        
+        &__item {
+          padding-left: 15px;
+          
+          &--selectable {
+            font-size: 15px;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+.case-study {
+  position: relative;
+  width: calc(100% / 2 - 30px);
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 80px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e4e4e4;
+  background-color: #ffffff;
+  
+  &__thumbnail {
+    position: relative;
+    display: block;
+    
+    &:after {
+      display: block;
+      content: "";
+      padding-bottom: 59.65%;
+    }
+    
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .type {
+      position: absolute;
+      z-index: 15;
+      top: 30px;
+      left: -13px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.13);
+      background-color: $color-green-2;
+      color: $color-white;
+      font-size: 19px;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: 0.64px;
+      line-height: normal;
+      text-transform: uppercase;
+      
+      &__inner {
+        min-width: 245px;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 56px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        &:before {
+          display: block;
+          content: "";
+          background-image: url(../img/case-study-angle.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 13px;
+          height: 12px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transform: translateY(100%);
+        }
+      }
+    }
+  }
+  
+  &__info {
+    display: block;
+    padding: 95px 50px;
+  }
+  
+  &__logo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    z-index: 15;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 110px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e4e4e4;
+    background-color: #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      object-fit: contain;
+      display: block;
+      max-height: 70%;
+      width: auto;
+    }
+  }
+  
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 52px;
+    
+    &:after {
+      width: 90px;
+      bottom: -25px;
+    }
+  }
+  
+  &__excerpt {
+    text-align: center;
+  }
+  
+  .btn-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-top: 25px;
+    transform: translateX(-50%) translateY(50%);
+    
+    .btn {
+      min-width: 295px;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    margin-bottom: 95px;
+    &__thumbnail {
+      .type {
+        top: 15px;
+        font-size: 16px;
+        height: 50px;
+        min-width: 250px;
+        
+        &__inner {
+          height: 50px;
+        }
+      }
+    }
+    &__logo {
+      height: 86px;
+      
+      img {
+        max-height: 45px;
+      }
+    }
+    &__info {
+      padding: 75px 40px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 660px) {
+    &__title {
+      font-size: 20px;
+    }
+    &__info {
+      padding: 68px 20px;
+    }
+  }
+}
+
+.case-study-wide {
+  position: relative;
+  width: calc(100% - 30px);
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 100px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e4e4e4;
+  background-color: #ffffff;
+  
+  &__thumbnail {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .type {
+      transform: translateX(-14px);
+      width: auto;
+      z-index: 15;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.13);
+      background-color: $color-green-2;
+      color: $color-white;
+      font-size: 19px;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: 0.64px;
+      line-height: normal;
+      text-transform: uppercase;
+      
+      &__inner {
+        min-width: 245px;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 56px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        &:before {
+          display: block;
+          content: "";
+          background-image: url(../img/case-study-angle.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 13px;
+          height: 12px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transform: translateY(100%);
+        }
+      }
+    }
+  }
+  
+  &__logo {
+    z-index: 15;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 110px;
+    background-color: #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      object-fit: contain;
+      display: block;
+      max-height: 70%;
+      width: auto;
+    }
+  }
+  
+  &__info {
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    padding-top: 25px;
+  }
+  
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 52px;
+    
+    &:after {
+      width: 90px;
+      bottom: -25px;
+    }
+  }
+  
+  &__excerpt {
+    text-align: center;
+    color: $color-grey;
+    
+    b, strong {
+      color: $color-black;
+    }
+  }
+  
+  .btn-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-top: 25px;
+    transform: translateX(-50%) translateY(50%);
+    
+    .btn {
+      min-width: 295px;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    margin-bottom: 95px;
+    &__thumbnail {
+      .type {
+        font-size: 16px;
+        height: 50px;
+        min-width: 250px;
+        
+        &__inner {
+          height: 50px;
+        }
+      }
+    }
+    &__logo {
+      height: 86px;
+      
+      img {
+        max-height: 45px;
+      }
+    }
+    &__info {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 660px) {
+    &__info {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__excerpt{
+      b{
+        font-weight: normal;
+      }
+      color: $color-black;
+    }
+    &__logo{
+      img{
+        max-height: 70px;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    &__thumbnail {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+    &__logo{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+    }
+  }
+}

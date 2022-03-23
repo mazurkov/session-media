@@ -1,0 +1,17 @@
+.single-case-studies {
+
+  // Header
+  .page-header {
+    max-height: 560px;
+
+    &__row {
+      padding-top: 85px;
+    }
+
+    @media (max-width: 991px) {
+      &__row {
+        padding: 0;
+      }
+    }
+  }
+}

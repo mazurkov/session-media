@@ -1,0 +1,253 @@
+.download-webinar-header {
+  height: 100vh;
+  max-height: 650px;
+  display: block;
+  position: relative;
+  width: 100%;
+  
+  &__bg {
+    pointer-events: none;
+    
+    img {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .container {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+  }
+  
+  &__subheading {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  &__row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  &__heading {
+    color: $color-white;
+    letter-spacing: 1.2px;
+    font-weight: normal;
+  }
+  
+  &__caption {
+    color: rgba($color-white, .95);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 22px;
+  }
+  
+  .col-left {
+    padding-top: 100px;
+    padding-right: 30px;
+    
+    .book {
+      display: none;
+    }
+  }
+  
+  .col-right {
+    padding-left: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 425px;
+  }
+  
+  .header-form-wrap {
+    margin-left: 20px;
+    margin-top: 65%;
+    
+    br {
+      display: none;
+    }
+    
+    .wpcf7-response-output, .ajax-loader {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1480px) {
+    .col-left {
+      padding-top: 75px;
+    }
+    
+    .col-right {
+      align-items: center;
+    }
+    
+    // Form
+    .header-form-wrap {
+      min-width: 365px;
+      width: 365px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 35px;
+      margin-top: 50%;
+      
+      .form {
+        &__title {
+          font-size: 24px;
+        }
+        
+        &__notice {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    &__row {
+      align-items: center;
+    }
+    .col-left {
+      width: calc(100% - 365px);
+      max-width: 100%;
+      padding-top: 45px;
+    }
+    .col-right {
+      padding-left: 0;
+      width: 365px;
+    }
+    .header-form-wrap {
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 991px) {
+    padding-bottom: 60px;
+    &__row {
+      flex-direction: column;
+    }
+    .col-left {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .col-right {
+      margin-top: 25px;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      
+      .header-form-wrap {
+        margin-left: auto;
+        margin-right: auto;
+        min-width: unset;
+        max-width: 100%;
+        width: 480px;
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    padding-top: 125px;
+    .col-left {
+      padding-top: 0;
+      
+      .content {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &__subheading {
+      text-align: center;
+    }
+    &__heading {
+      text-align: center;
+    }
+    &__caption {
+      text-align: center;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    
+  }
+  
+}
+
+
+.page-download-webinar {
+  .section-content-image {
+    padding-top: 215px;
+    @media (max-width: 1480px) {
+      padding-top: 150px;
+    }
+    @media (max-width: 1199px) {
+      padding-top: 100px;
+    }
+    @media (max-width: 991px) {
+      padding-top: 80px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 60px;
+    }
+  }
+  .book-description {
+    .features-grid {
+      max-width: 100%;
+      
+      .feature-item__list-item {
+        .icon {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  
+
+  
+  
+}
+
+
+
+.page-seo-ebook, .page-download-webinar{
+  // Extra Padding for webinar page
+  .sections-wrap{
+    .book-description{
+      &:first-child{
+        padding-top: 210px;
+        @media (max-width: 1199px) {
+          padding-top: 100px;
+        }
+        @media (max-width: 991px) {
+          padding: 80px 0;
+        }
+        @media (max-width: 565px) {
+          padding: 60px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.cta-image-section {
+  position: relative;
+  padding: 105px 0;
+
+  .bg {
+    pointer-events: none;
+
+    img {
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 15;
+  }
+
+  .section-row {
+    display: flex;
+  }
+
+  .col-left {
+    width: 65%;
+  }
+
+  .col-right {
+    width: 35%;
+    position: relative;
+
+    img {
+      position: absolute;
+      max-width: 680px;
+      transform: translateY(-10%) translateX(-4%);
+    }
+  }
+
+  .section-title {
+    max-width: 660px;
+  }
+
+  .logo-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 23px;
+
+    img {
+      max-width: 120px;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  .section-content {
+    margin-top: 12px;
+  }
+
+  .btn-wrap {
+    margin-top: 27px;
+  }
+
+  @media (max-width: 1366px) {
+    .col-right {
+      img {
+        max-width: 140%;
+        transform: translateY(-15%) translateX(-17%);
+      }
+    }
+  }
+  @media (max-width: 1199px) {
+    .col-right {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img {
+        transform: translateY(5%) translateX(-6%);
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .section-row {
+      flex-direction: column;
+    }
+    .section-title {
+      max-width: 80%;
+    }
+    .section-content {
+      max-width: 70%;
+    }
+    .col-left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .col-right {
+      margin-top: 50px;
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        position: static;
+        transform: none;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 75px 0;
+    .section-content {
+      max-width: 100%;
+    }
+    .section-title {
+      max-width: 100%;
+    }
+  }
+}

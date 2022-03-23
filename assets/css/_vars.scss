@@ -1,0 +1,25 @@
+// Grid Gap
+$grid-gap: 30px;
+
+// Window Height 100vh including mobile browser toolbar
+$max-vh: calc(var(--vh, 1vh) * 100);
+
+// Maximum Width including scrollbar
+$max-w: calc(100vw - var(--scroll-width));
+
+$font-primary: 'GT Walsheim Pro', sans-serif;
+// Thin 100
+// Light 300
+// Regular 400 normal
+// Medium 500
+// Bold bold
+// Black 900
+
+$color-white: #fff;
+$color-orange: #ef7216;
+$color-orange-light: #fcb249;
+$color-green: #6cad4e;
+$color-green-2:#97be64;
+$color-black: #000;
+$color-black-lighter: rgba($color-black, .7);
+$color-grey: #898989;

@@ -1,0 +1,141 @@
+.template-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  max-width: $max-w;
+}
+
+// Admin Bar Fixes
+.admin-bar {
+  padding-top: 32px;
+  @media (max-width: 800px) {
+    #wpadminbar {
+      overflow: hidden;
+    }
+  }
+
+  .nav-main.fixed {
+    top: calc(32px);
+  }
+
+  .nav-side {
+    top: 32px;
+    height: calc(100vh - 32px);
+  }
+
+  @media (max-width: 782px) {
+    padding-top: 46px;
+    .nav-main.fixed {
+      top: 46px;
+    }
+    .nav-side {
+      top: 46px;
+      height: calc(100vh - 46px);
+    }
+  }
+  @media (max-width: 600px) {
+    height: 100vh;
+    max-height: $max-vh;
+    padding-top: 0;
+    #wpadminbar {
+      display: none;
+    }
+    .nav-side {
+      top: 0;
+      height: 100vh;
+    }
+
+    .nav-main.fixed{
+      top: 0;
+    }
+
+  }
+}
+
+// Clients Slier
+@media (min-width: 992px) {
+  .page-header + .section-clients,
+  .home-header + .section-clients {
+    margin-top: -27.5px;
+  }
+
+}
+
+// Page About
+.page-id-8 {
+  @media (min-width: 992px) {
+    .section-clients {
+      margin-top: -27.5px;
+    }
+  }
+
+  .section-cases {
+    background-color: rgba(#f6f6f6, .5);
+  }
+
+  .section-about-section {
+    .col-left {
+      max-width: 550px;
+
+      .post-content {
+        font-size: 17px;
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .col-right {
+      .video-wrap {
+        padding: 40px;
+        background-color: #FA9239;
+      }
+    }
+  }
+}
+
+// Webinars
+.page-id-179 {
+  @media (max-width: 1366px) {
+    .page-header__bg img {
+      object-position: right center;
+    }
+  }
+}
+
+// Proposal
+.page-id-211 {
+  .page-header {
+    max-height: 500px;
+  }
+
+  .cta-section {
+    .section-title {
+      text-transform: unset;
+    }
+  }
+}
+
+// Case Studies
+.page-id-259 {
+  .page-header__bg img {
+    @media (max-width: 1366px) {
+      object-position: right center;
+    }
+  }
+
+  .page-header__row {
+    padding-top: 45px;
+    @media(max-width: 991px) {
+      padding-top: 0;
+    }
+  }
+
+  .page-header {
+    @media (max-width: 991px) {
+      padding-bottom: 175px;
+    }
+  }
+}
+
+

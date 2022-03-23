@@ -1,0 +1,239 @@
+.promo-video {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+  .col-left {
+    width: 58.75%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 165px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    .bg {
+      pointer-events: none;
+
+      img {
+        z-index: 10;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+        display: block;
+      }
+    }
+
+    .content {
+      max-width: 605px;
+      position: relative;
+      z-index: 10;
+
+      .section-title{
+        position: relative;
+        &:after{
+          position: relative;
+          display: inline-block;
+          content: "";
+          width: 175px;
+          height: 2px;
+          background-color: $color-white;
+          margin-left: 25px;
+          transform: translateY(-10px);
+        }
+      }
+      .section-subtitle {
+        margin-top: 10px;
+        line-height: 1.7;
+        font-size: 17px;
+        color: rgba($color-white, .9);
+      }
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      background-color: $color-white;
+      width: 85px;
+      height: 200%;
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      right: -45px;
+      z-index: 15;
+      transform: translateY(-50%) rotate(21deg);
+    }
+  }
+
+  .col-right {
+    padding-left: 165px;
+    width: 41.25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .video-link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .icon {
+        overflow: hidden;
+        width: 112px;
+        height: 112px;
+        border-radius: 100%;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        border: 3px solid $color-white;
+        background-color: #fcb249;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include transition;
+
+        svg {
+          width: 15px;
+
+          path {
+            fill: $color-white;
+          }
+        }
+
+        &:before {
+          display: block;
+          content: "";
+          width: 0;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background-color: rgba($color-white, .4);
+          @include transition;
+        }
+
+        &:hover {
+          color: $color-white;
+
+          &:before {
+            width: 100%;
+            background-color: rgba($color-white, .25);
+          }
+        }
+      }
+
+      .label {
+        margin-left: 14px;
+        color: #7F7F7F;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: normal;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 1.44px;
+        @include transition;
+
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .col-left {
+      width: 52%;
+    }
+    .col-right {
+      width: 48%;
+    }
+  }
+  @media(max-width: 1440px) {
+    .col-left {
+      padding-left: 70px;
+      padding-right: 120px;
+    }
+    .col-right {
+      padding-left: 80px;
+    }
+  }
+
+  @media (max-width: 1240px) {
+    .col-left{
+      .content{
+        .section-title{
+          &:after{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .col-left {
+      padding-left: 40px;
+
+      &:after {
+        width: 100px;
+        right: -50px;
+      }
+    }
+    .col-right {
+      padding-left: 30px;
+    }
+  }
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+    .col-left {
+      width: 100%;
+      padding: 65px 15px;
+      justify-content: center;
+     &:after{
+       display: none;
+     }
+      .content{
+        .section-title{
+          text-align: center;
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .section-subtitle{
+          margin-top: 14px;
+          text-align: center;
+        }
+      }
+    }
+    .col-right {
+      padding: 40px 15px;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+  @media (max-width: 480px) {
+    .col-left{
+      .content{
+        .section-title{
+          max-width: 100%;
+        }
+      }
+    }
+    .col-right {
+      .video-link {
+        .icon{
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+}
